@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Author : [Name] [Surname], Tomas Polasek (template)
+% Author : Evgenii Shiliaev, Tomas Polasek (template)
 % Description : Seventh exercise in the Introduction to Game Development course.
 %   It deals with the creation of a Game Design Document, presenting a short 
 %   pitch for a potential game project.
@@ -24,13 +24,26 @@
 % Image Sub-Captions
 \usepackage{subcaption}
 
+% The whole document not to be indented
+\setlength\parindent{0pt}
+
+% Some muted warnings
+% chktex-file 18
+% chktex-file 24
+% chktex-file 44
+
+% Quotes fixing
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
 \newcommand{\ph}[1]{\textit{[#1]}}
 
 \title{%
 Game Pitch Document%
 }
 \author{%
-[Name] [Surname] ([Login])%
+Evgenii Shiliaev (xshili00)%
 }
 \date{}
 
@@ -40,157 +53,159 @@ Game Pitch Document%
 \thispagestyle{empty}
 
 {%
-\large
+	\large
 
-\begin{itemize}
+	\begin{itemize}
 
-\item[] \textbf{Title:} \ph{Working Name or Title}
+		\item[] \textbf{Title:} \ph{Madness League}
 
-\item[] \textbf{Genre:} \ph{Full Genre}
+		\item[] \textbf{Genre:} \ph{Action Racing game}
 
-\item[] \textbf{Style:} \ph{2D/3D, Style, Visual}
+		\item[] \textbf{Style:} \ph{3D Realistic Art Style}
 
-\item[] \textbf{Platform:} \ph{Initial and Potential Platforms}
+		\item[] \textbf{Platform:} \ph{PC, Xbox One/Series consoles, PlayStation 4/5 consoles}
 
-\item[] \textbf{Market:} \ph{Target Market / Demographic}
+		\item[] \textbf{Market:} \ph{Arcade-racing games audience / 13--40 years}
 
-\item[] \textbf{Elevator Pitch:} \ph{``One-Liner'' Pitch (10-30 words max)}
+		\item[] \textbf{Elevator Pitch:} \ph{Multiplayer action arcade-racing game with power-ups and game-changing mutators}
 
-\end{itemize}
+	\end{itemize}
 
 }
 
-\section*{\centering The Pitch}
-
-\ph{Replace all text in this section with the game design pitch...}
-
-\subsection*{Instructions}
-
-In this exercise, you assume the role of an enterprising game developer who has a great idea for a new game -- \emph{The Game}. You are tasked with the creation of a short \emph{Game Design Document}. That is, a \emph{pitch} of The Game's main idea to potential \emph{investors} or \emph{leadership} of a game studio. If you have your own ideas for a game, this is a great opportunity to develop them further. Alternatively, you can also choose an already existing game, but I recommend trying to come up with your own idea first. 
-
-Within this template, you will find placeholders and hints \ph{like this one}, which you should read and replace with your own text. You can use any means of expression you deem appropriate -- text, reference images from other games, sketches, diagrams, tables, graphs, etc. Remember the goal: ``selling'' your idea so that you get the opportunity to actually \emph{make} The Game. Keep it brief and to the point. The length of your final document \textbf{shouldn't exceed 2-3 pages}. Following are example sections and pointers as to what they could contain. However, the document structure is certainly not set in stone. Feel free to modify it as necessary.
-
 \subsection*{Introduction}
-This should be the core of your pitch. Describe what \emph{exactly} it is you want to make. What is \emph{important}, what makes your game \emph{special}. All in one paragraph (50 words max).
+Madness League is a multiplayer action arcade racing game with a vehicle and environment destruction system.
+During the race, players (up to 16) can collect power-ups and choose game-changing mutators by completing in-race challenges.
 
 \subsection*{Background}
-What lead you to The Game's basic idea? What are the inspirations -- other games (even physical), sports, events, etc. Is it a continuation of some long-going traditional genre? Are you trying to bring back something that worked in the past?
+The main inspiration of core gameplay is the arcade machine in the mall of Kirov city, Russia.
+Unfortunately, it is not possible anymore to find out its name, and the game hasn't a PC port.
+It was about crazy off-road monster truck racing with \emph{Moorhuhn Kart}-like power-ups on nature tracks with immense sea-level changes.
+The mutators were inspired by \emph{Move Or Die} game.
+They significantly change game rules, controls, and even the core game mechanics.
+The vehicle and environment destruction system was inspired by \emph{Flatout 2} because destruction is fun, especially with good physics.
 
 \subsection*{Setting}
-Describe the setting of your game. Is your game \emph{narrative-based}? You should detail the basic plot here. Cover the character of your \emph{protagonist} and their interaction with the environment. Will your story be \emph{interactive}? You can put some example dialogues and possible choices here as well. Even games with \emph{light} or \emph{no narrative} take place in some kind of universe.
-
-\subsection*{Features}
-What are the main \emph{selling points} of your game? Think about the \emph{target market} and \emph{market values} of your game. What makes it unique among other, already existing games? Why would players want to play \emph{your} game instead of some other? You can use a bullet point list or combine it with a \emph{value graph}.
-
-\begin{figure}[h]
-
-\centering
-    
-\begin{tikzpicture}[remember picture]%
-\begin{axis}[
-    domain=0:1, 
-    clip=false, 
-    ymin=0, xmin=0, ymax=4.1, xmax=12, 
-    xtick={1,2,...,11}, 
-    yticklabels={}, 
-    xticklabels={Cyberpunk Plot, Stealth Gameplay, Reactive Story, Atmospheric World, 1st Person Combat, RPG Progression, Philosphical Themes, Advanced Graphics, Supernatural Powers, Art Deco Style, Sandbox Creativity}, 
-    xticklabel style={yshift={-mod(\ticknum, 2) * 2em}, text width=1.5cm, font=\small}, 
-    y tick style={draw=none}, 
-    x axis line style={|-|}, 
-    y axis line style={draw=none}, 
-    axis lines=middle, 
-    width=\linewidth, 
-    height=0.3\paperheight
-]
-    \addplot [ultra thick, mark=square*, mark options={scale=2,solid}] coordinates {
-        (1, 2.7)
-        (2, 1.3)
-        (3, 3.1)
-        (4, 3.0)
-        (5, 1.3)
-        (6, 1.8)
-        (7, 2.9)
-        (8, 0.8)
-        (9, 0.1)
-        (10, 0.1)
-        (11, 0.1)
-    } node[above, yshift=15pt, pos=0] {\textbf{Deus Ex}};
-    
-    \addplot [ultra thick, dashed, mark=triangle*, mark options={scale=2,solid}] coordinates {
-        (1, 0.1)
-        (2, 0.5)
-        (3, 0.7)
-        (4, 2.8)
-        (5, 2.9)
-        (6, 2.0)
-        (7, 3.0)
-        (8, 3.2)
-        (9, 3.1)
-        (10, 3.1)
-        (11, 0.1)
-    } node[above, yshift=5pt, xshift=-10pt, pos=0] {\textbf{BioShock}};
-    
-    \addplot [ultra thick, dotted, mark=diamond*, mark options={scale=2,solid}] coordinates {
-        (1, 0.1)
-        (2, 0.1)
-        (3, 0.1)
-        (4, 0.1)
-        (5, 0.3)
-        (6, 0.1)
-        (7, 0.1)
-        (8, 1.2)
-        (9, 0.1)
-        (10, 0.1)
-        (11, 3.1)
-    } node[above, yshift=5pt, xshift=-5pt, pos=1, text width=1cm, align=center] {\textbf{Garry's Mod}};
-    
-	\draw [] (axis cs:{0,1}) -- (axis cs:{12,1});
-	\draw [] (axis cs:{0,2}) -- (axis cs:{12,2});
-	\draw [] (axis cs:{0,3}) -- (axis cs:{12,3});
-	\draw [] (axis cs:{0,4}) -- (axis cs:{12,4});
-\end{axis}
-\end{tikzpicture}
-
-\caption{Example value graph for \emph{Deus Ex}, \emph{BioShock}, and \emph{Garry's Mod}.}
-\label{Fig:ValueGraph}
-
-\end{figure}
+In 2025, the most popular QroakToker\footnote{\textbf{QroakTok} is the one and only social network, the meta social media.} started the "Disabled Airbag" show about insane racing tournaments for people who have nothing to lose.
+Participants can be insolvent businessmen or crazy destitute people who are greedy for any opportunity to earn money. They get in the derby cars or monster trucks to meet themselves in savage races.
+If they survive the qualifying, they will have a chance to change their lives in the true madness.
 
 \subsection*{Genre}
-Specify the genre of The Game. Be \emph{clear}, but be sure to note on the \emph{nuances} which set your game apart from others within the same genre. 
+\emph{Madness League} is an action game.
+The player can damage opponents' vehicles by rushing into them at high speed or by using power-ups and tools during the route.
+The game is arcade. It isn't about realism but fun, chaos, and fun chaos.
+As more mutators are in the game, the more difficult it is to reach the finish but more fun.
+The game is not about the story but pure gameplay.
+And finally, \emph{Madness League} is a racing.
+No matter what just push the pedal to the metal and be first.
 
-\subsection*{Platform}
-What are the platforms you plan to release The Game on? Do you have a core set in mind? Are you going to release versions for other platforms later?
-
-\subsection*{Style}
-Here, you can provide a visualization of what The Game would look like. Don't have concept artist at hand? Use diagrams, schemes, or illustrate on images from already existing games. It is time to dust off your \emph{Microsoft Paint} skills!
+\subsection*{Features}
+The main feature of the game is the mutators (Table~\ref{tab:mutators}).
+Unlike the power-ups, they modify the whole game session by changing the rules.
+Many mutators and their combinations will make the game fun and hugely replayable.
+The other significant feature is the AI of the enemies because they should be "clever" enough to challenge the players.
+It is not acceptable to let computer opponents use dirty tricks, which are in other racing games.
+The racing tracks' verticality will make them extremely dangerous and literally breathtaking.
+The combination of these three main features makes the game unique among other already existing games on chosen platforms.
+The target audience is grown-up \emph{Mario Kart} and \emph{Crash Team Racing} fans, \emph{Flatout 2} fans, and other casual players, especially on PC because there isn't any similar game to \emph{Madness League}.
 
 \begin{figure}[h]
 
-\centering
+	\centering
 
-\begin{subfigure}{0.29\linewidth}
-\includegraphics[width=\linewidth]{example-image-a}
-\captionof{figure}{Style Exhibit 1a.}
-\label{Fig:Style1A}
-\end{subfigure}\hfill
-%
-\begin{subfigure}{0.29\linewidth}
-\includegraphics[width=\linewidth]{example-image-b}
-\captionof{figure}{Style Exhibit 1b.}
-\label{Fig:Style1B}
-\end{subfigure}\hfill
-%
-\begin{subfigure}{0.29\linewidth}
-\includegraphics[width=\linewidth]{example-image-c}
-\captionof{figure}{Style Exhibit 1c.}
-\label{Fig:Style1C}
-\end{subfigure}
+	\begin{tikzpicture}[remember picture]%
+		\begin{axis}[
+				domain=0:1,
+				clip=false,
+				ymin=0, xmin=0, ymax=4.1, xmax=12,
+				xtick={1,2,...,11},
+				yticklabels={},
+				xticklabels={Vehicle Fleet Size, Vehicle Diversity, Power-ups Diversity, Tracks Diversity, Tracks Verticality, Environment Interactivity, Enemies' AI, Destruction Physics, Mutators, Art Deco Style, Realistic Graphics},
+				xticklabel style={yshift={-mod(\ticknum, 2) * 2em}, text width=1.5cm, font=\small},
+				y tick style={draw=none},
+				x axis line style={|-|},
+				y axis line style={draw=none},
+				axis lines=middle,
+				width=\linewidth,
+				height=0.3\paperheight
+			]
+			\addplot [ultra thick, mark=square*, mark options={scale=2,solid}] coordinates {
+					(1, 1.0)
+					(2, 1.5)
+					(3, 2.5)
+					(4, 3.6)
+					(5, 3.0)
+					(6, 3.3)
+					(7, 2.9)
+					(8, 3.5)
+					(9, 3.7)
+					(10, 3.0)
+					(11, 2.7)
+				} node[above, yshift=15pt, pos=0, yshift=-10pt, xshift=-10pt, text width=2cm, align=center] {\textbf{Madness League}};
+
+			\addplot [ultra thick, dashed, mark=triangle*, mark options={scale=2,solid}] coordinates {
+					(1, 0.1)
+					(2, 0.1)
+					(3, 1.5)
+					(4, 1.7)
+					(5, 1.0)
+					(6, 0.3)
+					(7, 2.0)
+					(8, 0.1)
+					(9, 0.1)
+					(10, 2.1)
+					(11, 0.1)
+				} node[above, yshift=5pt, xshift=-10pt, pos=0, text width=2cm, align=center] {\textbf{Moorhuhn Kart 2}};
+
+			\addplot [ultra thick, dotted, mark=diamond*, mark options={scale=2,solid}] coordinates {
+					(1, 3.0)
+					(2, 2.5)
+					(3, 0.1)
+					(4, 2.5)
+					(5, 1.7)
+					(6, 3.0)
+					(7, 3.6)
+					(8, 2.5)
+					(9, 0.5)
+					(10, 3.2)
+					(11, 3.7)
+				} node[above, yshift=-15pt, xshift=25pt, pos=1, text width=2cm, align=center] {\textbf{Forza Horizon 4}};
+
+			\draw [] (axis cs:{0,1}) -- (axis cs:{12,1});
+			\draw [] (axis cs:{0,2}) -- (axis cs:{12,2});
+			\draw [] (axis cs:{0,3}) -- (axis cs:{12,3});
+			\draw [] (axis cs:{0,4}) -- (axis cs:{12,4});
+		\end{axis}
+	\end{tikzpicture}
+
+	\caption{Value graph for \emph{Madness League}, \emph{Moorhuhn Kart 2}, and \emph{Forza Horizon 4}.}
+	\label{Fig:ValueGraph}
 
 \end{figure}
 
-\subsection*{Formatting \& Submission}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{
+			p{\dimexpr.32\linewidth-2\tabcolsep-1.3333\arrayrulewidth}
+			p{\dimexpr.68\linewidth-2\tabcolsep-1.3333\arrayrulewidth}}
+		\textbf{Name}          & \textbf{Description}                   \\ \hline
+		From Zero to Hero      & The last player becomes the first.
+		The rest of the players disappear from the leaderboard.
+		They must update their position by touching the first player.   \\ \hline
+		Death Zone             & A moving zone appears.
+		All players must be in there, otherwise, they will take damage.
+		There is an option when the center of the area is a player.     \\ \hline
+		Back to Roots          & The finish point is now behind.
+		Players must reroute in the opposite direction.                 \\ \hline
+		Learn to Drive. Again. & Players can go forward only backwards.
+		Difficult one.                                                  \\ \hline
+	\end{tabular}
+	\caption{Some mutators examples}
+	\label{tab:mutators}
+\end{table}
 
-Your submission should follow a similar \textbf{structure} to this template. You can either use the provided \LaTeX\ template or roughly replicate it in some other text processing software. The format of the section ``\emph{The Pitch}'' is left up to you. For inspiration, see the game design documents included on the \href{http://cphoto.fit.vutbr.cz/ludo/courses/izhv/exercises/e7/}{assignment page}, or the lecture dedicated to \href{http://cphoto.fit.vutbr.cz/ludo/courses/izhv/lectures/l12/}{game development}. The only accepted document format is \textbf{pdf}. You can submit the pdf by following the submission guidelines detailed on the \href{http://cphoto.fit.vutbr.cz/ludo/courses/izhv/exercises/sub/}{course's website}. 
+\subsection*{Platform}
+The game will release on PC, 8th and 9th generation consoles of Microsoft and Sony.
+\emph{Madness League} can be ported to Nintendo consoles later to take away some Mario Kart fans from Nintendo.
 
 \end{document}
